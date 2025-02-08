@@ -1,23 +1,7 @@
 [
     {
-        "name": "Core Functions",
-        "text": "This section covers core Lua functions such as `calculate_sum` and `string.reverse`."
-    },
-    {
-        "name": "Math Utilities",
-        "text": "This section includes mathematical functions like `math.sqrt`, `math.sin`, and `math.random`."
-    },
-    {
-        "name": "String Operations",
-        "text": "This section explains string manipulation functions such as `string.sub`, `string.gsub`, and `string.find`."
-    },
-    {
-        "name": "Table Manipulation",
-        "text": "This section covers table-related functions like `table.insert`, `table.remove`, and `table.concat`."
-    },
-    {
-        "name": "Event System",
-        "text": "This section describes event handling functions such as `event.listen`, `event.trigger`, and `event.remove`."
+        "name": "THIS TEST",
+        "text": "TEST"
     },
     {
         "name": "Example Function",
