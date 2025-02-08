@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua API Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar with API Reference Tab -->
+        <nav class="sidebar">
+            <div class="api-tab">
+                <h2>API Reference</h2>
+                <input type="text" class="search-bar" id="searchBar" placeholder="Search API...">
+                <div id="navItems">
+                    <!-- Navigation items will be dynamically populated here -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="mainContent">
+            <h1>Lua API Documentation</h1>
+            <div id="pageContent">
+                <!-- Page content will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lua.min.js"></script>
+</body>
+</html>
