@@ -22,18 +22,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
-      # Configure Pages with your custom domain
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          hostname: "hypsych.engine"  # Replace with your custom domain (e.g., example.com)
+          hostname: "hypsych.engine"  # Replace with your custom domain
       
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -41,21 +39,12 @@ jobs:
           source: ./
           destination: ./_site
       
-      # Create CNAME file (only needed if not already in your repository)
+      # Add a step to fix permissions on _site
+      - name: Fix permissions on _site
+        run: sudo chown -R $USER:$USER _site
+      
       - name: Add CNAME file
-        run: echo "hypsych.engine" > ./_site/CNAME  # Replace with your custom domain
+        run: echo "hypsych.engine" > ./_site/CNAME
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
